@@ -1,0 +1,23 @@
+import { createBrowserRouter } from 'react-router-dom' // Importação do createBrowserRouter para configurar as rotas
+
+import { RootLayout } from './components/layout/RootLayout'
+
+export const router = createBrowserRouter([
+  {
+    element: <RootLayout />,
+    children: [
+      {
+        path: '/',
+        element: <SimulationFormPage />,
+      },
+      {
+        path: '/resultado/:id',
+        element: <SimulationResultsPage />,
+      },
+      {
+        path: '/historico',
+        element: <h1>Histórico de Simulações</h1>,
+      },
+    ],
+  },
+])
