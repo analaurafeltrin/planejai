@@ -1,8 +1,8 @@
-import { createBrowserRouter } from 'react-router-dom'; // Importação do createBrowserRouter para configurar as rotas
+import { createBrowserRouter } from 'react-router-dom' // Importação do createBrowserRouter para configurar as rotas
 
-import { RootLayout } from './components/layout/RootLayout';
-import { SimulationFormPage } from './pages/SimulationFormPage';
-import { SimulationResultsPage } from './pages/SimulationResultsPage';
+import { RootLayout } from './components/layout/RootLayout'
+import { SimulationFormPage } from './pages/SimulationFormPage'
+import { SimulationResultsPage } from './pages/SimulationResultsPage'
 
 export const router = createBrowserRouter([
   {
@@ -22,4 +22,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+])

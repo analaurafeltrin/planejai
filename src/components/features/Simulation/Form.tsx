@@ -1,16 +1,13 @@
-import { PiggyBank } from 'lucide-react';
-import { FormStep } from './FormStep';
-import { StepProgress } from './Progress';
+import { FormStep } from './FormStep'
+import { StepProgress } from './Progress'
+import { simulationFormSteps } from '@/data/simulation'
 
 export const SimulationForm = () => {
+  const currentStep = simulationFormSteps[0]
   return (
     <>
       <StepProgress currentStep={1} totalSteps={6} />
-      <FormStep
-        icon={PiggyBank}
-        title="Renda mensal bruta"
-        question="Quanto é depositado na sua conta todo mês (somando todas as fontes)?"
-      />
+      <FormStep key={currentStep.id} {...currentStep} />
     </>
-  );
-};
+  )
+}

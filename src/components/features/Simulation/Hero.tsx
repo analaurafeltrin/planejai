@@ -1,4 +1,4 @@
-import PiggyBankImage from '@/assets/images/piggy-bank.png';
+import PiggyBankImage from '@/assets/images/piggy-bank.png'
 
 export function SimulationHero() {
   return (
@@ -16,5 +16,5 @@ export function SimulationHero() {
         Responda algumas questões para ter insights financeiros personalizado
       </p>
     </div>
-  );
+  )
 }

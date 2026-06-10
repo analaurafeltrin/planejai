@@ -1,10 +1,10 @@
-import type { InputHTMLAttributes } from 'react';
+import type { InputHTMLAttributes } from 'react'
 
-import { Divider } from './Divider';
+import { Divider } from './Divider'
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  prefix?: string;
-  suffix?: string;
+  prefix?: string
+  suffix?: string
 }
 
 export function Input({ prefix, suffix, ...rest }: InputProps) {
@@ -28,5 +28,5 @@ export function Input({ prefix, suffix, ...rest }: InputProps) {
         </>
       )}
     </div>
-  );
+  )
 }

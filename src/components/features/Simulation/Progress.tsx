@@ -1,11 +1,11 @@
 interface StepProgressProps {
   // definindo quais props esse componente vai receber
-  currentStep: number;
-  totalSteps: number;
+  currentStep: number
+  totalSteps: number
 }
 
 export function StepProgress({ currentStep, totalSteps }: StepProgressProps) {
-  const progress = (currentStep / totalSteps) * 100;
+  const progress = (currentStep / totalSteps) * 100
   // dividindo uma step pela outra e * por 100 pra dar valor de porcentagem
 
   return (
@@ -24,5 +24,5 @@ export function StepProgress({ currentStep, totalSteps }: StepProgressProps) {
         />
       </div>
     </div>
-  );
+  )
 }
