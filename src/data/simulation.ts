@@ -1,5 +1,7 @@
 import { CalendarClock, CreditCard, Goal, Landmark, PiggyBank, Wallet } from 'lucide-react'
 
+import type { InsightData } from '@/services/aiService'
+
 import type { FormStepProps } from '../components/features/Simulation/FormStep'
 
 export const simulationFormSteps = [
@@ -75,3 +77,24 @@ export const simulationFormSteps = [
     },
   },
 ] satisfies FormStepProps[]
+
+export type SimulationFormData = Record<(typeof simulationFormSteps)[number]['id'], string>
+
+export type SimulationRecord = SimulationFormData & {
+  id: string
+  insight?: InsightData
+}
+
+/*
+ * simulation (data)
+ 
+ * Define as etapas do formulário de simulação e os tipos relacionados.
+ 
+ * simulationFormSteps: array de 6 etapas (satisfies FormStepProps[]), cada uma com
+ *   id, ícone, título, pergunta e inputProps — na ordem:
+ *   income → expenses → debts → goalName → goalAmount → goalDeadline
+ *   A última etapa (goalDeadline) tem submitButtonProps customizado ("Gerar simulação ✨")
+ 
+ * SimulationFormData: Record cujas chaves são os ids das etapas, todas com valor string
+ * SimulationRecord: estende SimulationFormData adicionando id (string) e insight opcional (InsightData)
+ */

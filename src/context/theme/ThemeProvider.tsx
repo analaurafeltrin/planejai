@@ -26,3 +26,14 @@ export function ThemeProvider({ children }: PropsWithChildren) {
 
   return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>
 }
+
+/*
+ * ThemeProvider
+ 
+ * Provedor de tema (light/dark) para a aplicação.
+ 
+ * - Inicializa o tema lendo o localStorage; se ausente, usa a preferência do sistema
+ * - useEffect: sincroniza o tema no atributo data-theme do <html> e no localStorage
+ * - toggleTheme: alterna entre 'light' e 'dark'
+ * - Expõe { theme, toggleTheme } via ThemeContext.Provider
+ */
